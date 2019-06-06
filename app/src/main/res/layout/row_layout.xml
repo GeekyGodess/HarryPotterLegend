@@ -22,7 +22,8 @@
         android:layout_alignParentRight="true"
         android:layout_toRightOf="@id/image"
         android:ellipsize="marquee"
-        android:text="Description"
+        android:text="Nom personnage"
+        android:fontFamily="sans-serif-medium"
         android:textSize="12sp"
         android:singleLine="true" />
 
@@ -35,8 +36,9 @@
         android:layout_alignParentTop="true"
         android:layout_alignWithParentIfMissing="true"
         android:layout_toRightOf="@id/image"
+        android:fontFamily="sans-serif-medium"
         android:gravity="center_vertical"
-        android:text="Example application"
+        android:text="Espèce du personnage"
         android:textSize="16sp" />
 
 </RelativeLayout>
