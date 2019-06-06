@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.RequestManager;
+import com.squareup.picasso.Picasso;
 
 /*
 Cette classe correspond au Modèle dans le modèle MVC: elle gère la logique
@@ -29,7 +30,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder> {
         // each data item is just a string in this case
         public TextView nameCharacter;
         public TextView speciesCharacter;
-        public ImageView image;
+        public ImageView imageCharacter;
         public View layout;
 
 
@@ -38,7 +39,7 @@ public ViewHolder(View v) {
         layout = v;
         nameCharacter = (TextView) v.findViewById(R.id.name);
         speciesCharacter = (TextView) v.findViewById(R.id.species);
-       // image = (ImageView)v.findViewById(R.id.image);
+       imageCharacter = (ImageView)v.findViewById(R.id.image);
         }
         }
 
@@ -77,8 +78,8 @@ public void onBindViewHolder(ViewHolder holder, final int position) {
 // - get element from your dataset at this position
 // - replace the contents of the view with that element
 final Character character = values.get(position);
-        holder.nameCharacter.setText(character.name);
-       //Glide.with(this).asBitmap().load(character.image).into(holder.image);
+        holder.nameCharacter.setText(character.getName());
+        Glide.with(holder.imageCharacter.getContext()).load(character.getImage()).into(holder.imageCharacter);
         holder.nameCharacter.setOnClickListener((v) ->{
 
             Intent intent = new Intent(v.getContext(),SecondActivity.class);
@@ -86,15 +87,15 @@ final Character character = values.get(position);
             intent.putExtra("species", character.getSpecies());
             intent.putExtra("gender", character.getGender());
             intent.putExtra("house", character.getHouse());
+            intent.putExtra("image", character.getImage());
+            intent.putExtra("patronus", character.getPatronus());
+            intent.putExtra("ancestry", character.getAncestry());
+            intent.putExtra("actor", character.getActor());
+            intent.putExtra("hair", character.getHairColour());
+            intent.putExtra("birth",character.getDateOfBirth());
             v.getContext().startActivity(intent);
             notifyDataSetChanged();
-/*@Override
-public void onClick(View v) {
-       // remove(position);
-    Intent intent = new Intent(v.getContext(),SecondActivity.class);
-    intent.putExtra("name", character.getName());
-    v.getContext().startActivity(intent);
-        }*/
+
         });
         holder.layout.setOnClickListener((v)->{
             Intent intent = new Intent(v.getContext(),SecondActivity.class);
@@ -102,12 +103,18 @@ public void onClick(View v) {
             intent.putExtra("species", character.getSpecies());
             intent.putExtra("gender", character.getGender());
             intent.putExtra("house", character.getHouse());
+            intent.putExtra("image", character.getImage());
+            intent.putExtra("patronus", character.getPatronus());
+            intent.putExtra("ancestry", character.getAncestry());
+            intent.putExtra("actor", character.getActor());
+            intent.putExtra("hair", character.getHairColour());
+            intent.putExtra("birth",character.getDateOfBirth());
 
             v.getContext().startActivity(intent);
             notifyDataSetChanged();
         });
 
-        holder.speciesCharacter.setText( character.species);
+        holder.speciesCharacter.setText( character.getSpecies());
         }
 
 // Return the size of your dataset (invoked by the layout manager)
