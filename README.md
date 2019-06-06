@@ -13,4 +13,10 @@ Projet de développpement mobile visant à afficher une liste faisant appel à u
 
 ## Captures d'écran
 
+Capture d'écran de l'écran affichant la liste des personnages du monde d'Harry Potter:
 ![GitHub Logo](images_readme/Ecran_liste_personnages.jpg)
+
+Capture d'écran de l'écran affichant les détails sur un personnage (ici Hermione Granger):
+![GitHub Logo](images_readme/Ecran_details_personnage.jpg)
+
+Le passage de l'écran affichant la liste des personnages du monde d'Harry Potter à l'écran affichant les détails sur un personnage se fait en cliquant sur un personnage dans le premier écran.
