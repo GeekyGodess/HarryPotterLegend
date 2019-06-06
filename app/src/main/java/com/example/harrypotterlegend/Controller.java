@@ -10,7 +10,10 @@ import retrofit2.Callback;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
-
+/*
+Cette classe joue le rôle du Controller dans le modèle MVC elle intéragit avec le modèle (Adapter)
+pour créer des données pour la Vue (MainActivity)
+ */
 public class Controller implements Callback<List<Character>> {
 
     static final String BASE_URL = "https://raw.githubusercontent.com/GeekyGodess/geekygodess.github.io/master/";
@@ -19,6 +22,8 @@ public class Controller implements Callback<List<Character>> {
     public Controller(MainActivity mainActivity) {
         this.mainActivity = mainActivity;
     }
+
+
 
     public void start() {
         Gson gson = new GsonBuilder()

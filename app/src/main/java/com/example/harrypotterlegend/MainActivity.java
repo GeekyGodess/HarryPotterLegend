@@ -5,14 +5,20 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
+
+
 
 import java.util.ArrayList;
 import java.util.List;
-
-public class MainActivity extends Activity {
+/*
+Joue le rôle de la vue dans le modèle MVC: IHM pour l'utilisateur et envoie
+les commandes rentrées par l'utilisateur au controlleur
+ */
+public class MainActivity extends Activity  {
     private RecyclerView recyclerView;
-    private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager layoutManager;
+    private MyAdapter mAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,8 @@ public class MainActivity extends Activity {
     }
 
     public void displayList(List<Character> characterList) {
+        Log.d("projectA","DisplayList Started");
+
         // use this setting to
         // improve performance if you know that changes
         // in content do not change the layout size
@@ -37,4 +45,5 @@ public class MainActivity extends Activity {
         mAdapter = new MyAdapter(characterList);
         recyclerView.setAdapter(mAdapter);
     }
+
 }
