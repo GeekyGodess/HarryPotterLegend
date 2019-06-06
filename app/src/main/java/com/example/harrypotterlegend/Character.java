@@ -5,19 +5,19 @@ import android.support.annotation.NonNull;
 public class Character {
    String name;
    String species;
-   /*String gender;
+   String gender;
    String house;
-   String dateOfBirth;
-   int yearOfBirth;
-   String ancestry;
+  String dateOfBirth;
+   String yearOfBirth;
+  String ancestry;
    String eyesColour;
    String hairColour;
-   Wand wand;
+  /* Wand wand;
    String patronus;
    boolean hogwartsStudent;
    boolean hogwartsStaff;
    String actor;
-   boolean alive;
+   boolean alive;*/
    String image;
 
     public void setName(String name) {
@@ -39,7 +39,7 @@ public class Character {
     public String getHouse() {
         return house;
     }
-
+/*
     public String getDateOfBirth() {
         return dateOfBirth;
     }
@@ -60,7 +60,7 @@ public class Character {
         return hairColour;
     }
 
-    public Wand getWand() {
+    /*public Wand getWand() {
         return wand;
     }
 
@@ -82,13 +82,13 @@ public class Character {
 
     public Boolean getAlive() {
         return alive;
-    }
+    }*/
 
     public String getImage() {
         return image;
     }
 
-    @Override
+   /* @Override
     public String toString() {
         return "Character{" +
                 "name='" + name + '\'' +
@@ -109,7 +109,8 @@ public class Character {
                 ", image='" + image + '\'' +
                 '}';
     }
-
+*/
+/*
     public void setSpecies(String species) {
         this.species = species;
     }
@@ -142,7 +143,7 @@ public class Character {
         this.hairColour = hairColour;
     }
 
-    public void setWand(Wand wand) {
+   /* public void setWand(Wand wand) {
         this.wand = wand;
     }
 
