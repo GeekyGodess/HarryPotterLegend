@@ -13,4 +13,4 @@ Projet de développpement mobile visant à afficher une liste faisant appel à u
 
 ## Captures d'écran
 
-![My image]images_readme/Ecran_liste_personnages.jpg
+![GitHub Logo](images_readme/Ecran_liste_personnages.jpg)
