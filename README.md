@@ -1,5 +1,5 @@
 # HarryPotterLegend
-Projet de développpement mobile visant à afficher une liste d'items en faisant appel à un serveur(API rest) et utilisant le modèle MVC, puis d'ouvrir un deuxième écran en cliquant sur un item de la liste du premier écran
+Projet de développpement mobile visant à afficher une liste d'items en faisant appel à un serveur (API rest) et utilisant le modèle MVC, puis d'ouvrir un deuxième écran affichant des détails sur un des items de la liste en cliquant sur un item de la liste du premier écran
 
 ## Prérequis:
 -installation d'android studio
